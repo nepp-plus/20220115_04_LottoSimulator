@@ -124,8 +124,24 @@ public class MainDrive {
 				
 //				중복검사에 통과하면, 다음 숫자.
 				
+				if (isDuplOk) {
+					
+//					당첨번호에 랜덤숫자 등록
+					winNumberArr[i] = randomNum;
+					
+//					무한반복 종료 -> 다음숫자로 이동.
+					break;
+					
+				}
+				
 			}
 			
+		}
+		
+		
+//		확인용 - 당첨번호가 어떻게나왔는지?
+		for (int winNum :  winNumberArr) {
+			System.out.println(winNum);
 		}
 		
 		
