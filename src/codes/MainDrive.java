@@ -106,9 +106,21 @@ public class MainDrive {
 //				컴퓨터에게 1~45 랜덤 추출 요청.
 				
 //				Math.random()*45 + 1 => int로 강제변환 (소수점 버림) :   1 <= (정수)결과물*45+1 < 46  :  1~45
-				int randomNum = (int) (Math.random() * 45 + 1);
+				int randomNum = (int) (Math.random() * 45 + 1);  // 캐스팅 (Casting) => int로 형 변환 수행.
 				
 //				랜덤숫자를 중복검사 수행.
+//				당첨번호에, 랜덤숫자와 같은게 있다면? 중복검사 탈락.
+				
+				boolean isDuplOk = true;
+				
+				for (int winNum  :  winNumberArr) {
+					
+					if (winNum == randomNum) {
+						isDuplOk = false;
+						break;
+					}
+					
+				}
 				
 //				중복검사에 통과하면, 다음 숫자.
 				
